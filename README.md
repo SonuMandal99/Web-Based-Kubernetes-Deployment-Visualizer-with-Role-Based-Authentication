@@ -1,15 +1,4 @@
 # Kubernetes Deployment Visualizer
-
-<div align="center">
-
-A full-stack web application to visualize and manage Kubernetes Deployments, Pods, Services, and Namespaces with role-based authentication.
-
-**[Features](#features) • [Quick Start](#quick-start) • [Tech Stack](#tech-stack) • [API Reference](#api-reference) • [Troubleshooting](#troubleshooting)**
-
-</div>
-
----
-
 ## Overview
 
 **Kubernetes Deployment Visualizer** is a modern web-based tool designed for visualizing and managing Kubernetes resources. It features:
@@ -287,9 +276,6 @@ Response includes JWT token. Store it (localStorage in browser).
 5. View detailed tables and logs
 6. (Admin only) Scale deployments with the modal
 
----
-
-## Troubleshooting
 
 ### CORS Errors
 
@@ -300,27 +286,7 @@ Response includes JWT token. Store it (localStorage in browser).
 CORS_ORIGIN=http://localhost:5173
 ```
 
-### MongoDB Connection Failed
 
-**Problem**: `Error: connect ECONNREFUSED`  
-**Solution**: Ensure MongoDB is running and `MONGO_URI` is correct
-
-```bash
-# Local MongoDB
-MONGO_URI=mongodb://localhost:27017/k8s-visualizer
-
-# MongoDB Atlas (cloud)
-MONGO_URI=mongodb+srv://user:password@cluster.mongodb.net/k8s-visualizer
-```
-
-### Kubernetes Cluster Not Found
-
-**Problem**: Getting mock data instead of real K8s data  
-**Solution**: This is normal! The app gracefully falls back to mock mode. To use real cluster:
-
-1. Ensure kubeconfig is valid: `kubectl cluster-info`
-2. Set `KUBECONFIG_PATH` in backend `.env`
-3. Restart backend
 
 ### Frontend Build Errors
 
@@ -418,33 +384,7 @@ This project is designed for **local development**. For production deployment:
 
 ---
 
-## Contributing
 
-This project is available for forking and adaptation. If you implement improvements or bug fixes, feel free to submit a pull request!
 
----
 
-## License
-
-MIT License - See LICENSE file for details
-
----
-
-## Support
-
-For issues, questions, or feature requests:
-1. Check [Troubleshooting](#troubleshooting) section
-2. Review [backend/README.md](backend/README.md) and [frontend/README.md](frontend/README.md)
-3. Open a GitHub issue with details
-
----
-
-<div align="center">
-
-**Made with ❤️ for the Kubernetes community**
-
-⭐ If you find this project helpful, please consider giving it a star!
-
-</div>
-#   W e b - B a s e d - K u b e r n e t e s - D e p l o y m e n t - V i s u a l i z e r - w i t h - R o l e - B a s e d - A u t h e n t i c a t i o n  
  
